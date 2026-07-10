@@ -1,0 +1,61 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Word2Vec: Learning Word Meaning from Context · Yuting He | Research Notebook</title><link rel="stylesheet" href="/assets/style.css?v=9"><script defer src="/assets/search.js?v=9"></script><!-- GoatCounter analytics: create an account and replace YOUR-CODE below. --><!-- <script data-goatcounter="https://YOUR-CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> --></head><body><aside class="sidebar">
+<a class="profile" href="/index.html" aria-label="Home">
+  <img src="/assets/avatar.jpg" alt="Yuting He" class="avatar">
+  <span class="profile-name">Yuting He</span>
+  <span class="profile-role">PhD Candidate · UT Austin</span>
+</a>
+<nav class="navlinks">
+<a href="/index.html">Home</a>
+<a href="/Research Notes/index.html">Research Notes</a>
+<details open><summary>AI & Society</summary>
+<a href="/AI and Society/index.html" class="nav-parent">Overview</a>
+<a href="/AI and Society/introduction-to-ai.html">Introduction to AI</a>
+<a href="/AI and Society/human-ai-interaction.html">Human–AI Interaction</a>
+<a href="/AI and Society/ai-effects-on-society.html">AI Effects on Society</a>
+</details>
+<a href="/Political Communication/index.html">Political Communication</a>
+<details open><summary>Research Tools & Methods</summary>
+<a href="/Research Tools and Methods/index.html" class="nav-parent">Overview</a>
+<a href="/Research Tools and Methods/Natural Language Processing NLP/index.html">Natural Language Processing (NLP)</a>
+</details>
+</nav>
+<div class="sidebar-footer">
+  <a href="https://x.com/ytinghe?s=11&t=XWACFtYNgirOvXK8ZoiHjw" aria-label="X / Twitter" title="X / Twitter" target="_blank" rel="noopener">𝕏</a>
+  <a href="https://scholar.google.com/citations?user=yOc4yeUAAAAJ&hl=en" aria-label="Google Scholar" title="Google Scholar" target="_blank" rel="noopener">Scholar</a>
+  <a href="/cv.html" aria-label="CV" title="CV">CV</a>
+  <a href="mailto:yutinghe@utexas.edu" aria-label="Email" title="Email">Email</a>
+</div>
+</aside><main><div class="topbar"><input id="search" placeholder="Search research notes…"><button id="theme" aria-label="Toggle dark mode">◐</button></div><header class="pagehead"><h1>Word2Vec: Learning Word Meaning from Context</h1><div class="meta">2026-07-09 · <span class="tag">#NLP</span> <span class="tag">#Word Embeddings</span> <span class="tag">#Computational Methods</span></div></header><article><p>Word2Vec is a neural embedding framework designed to learn dense, low-dimensional vector representations of words from raw text. Its central idea is simple but powerful: words that appear in similar linguistic environments should be located close to one another in the embedding space.</p>
+<p>In this sense, Word2Vec operationalizes a modern version of the distributional hypothesis: a word can be understood by the company it keeps. It does so through a computationally efficient neural architecture that learns word meaning from patterns of co-occurrence.</p>
+<h2 id="two-architectures-cbow-and-skip-gram">Two architectures: CBOW and Skip-gram</h2>
+<p>There are two main variants of Word2Vec: <strong>CBOW</strong> and <strong>Skip-gram</strong>. The key difference lies in the direction of prediction.</p>
+<h3 id="cbow-predicting-the-center-word">CBOW: predicting the center word</h3>
+<p><strong>CBOW</strong>, or <strong>Continuous Bag of Words</strong>, takes the surrounding context words within a fixed sliding window and tries to predict the missing center word.</p>
+<p>In implementation, the embeddings of the surrounding context words are typically summed or averaged, and this combined representation is then used to infer the probability of the target word.</p>
+<p>Conceptually, CBOW works like a fill-in-the-blank exercise: given the surrounding words, what is the missing word in the middle?</p>
+<h3 id="skip-gram-predicting-the-context">Skip-gram: predicting the context</h3>
+<p><strong>Skip-gram</strong> reverses the prediction direction. It starts from a center word and attempts to predict the words that are likely to appear around it.</p>
+<p>Conceptually, Skip-gram works like imagining possible contexts from a single word: given this word, what other words are likely to appear nearby?</p>
+<h2 id="cbow-vs-skip-gram">CBOW vs. Skip-gram</h2>
+<div class="mini-grid"><div class="mini-card"><strong>CBOW</strong>Context words → center word<br><br>Intuition: fill in the blank.<br><br>Strength: faster training.</div><div class="mini-card"><strong>Skip-gram</strong>Center word → context words<br><br>Intuition: predict possible contexts.<br><br>Strength: better for rare words.</div></div>
+<p>In practice, <strong>CBOW tends to be faster to train</strong> because each update predicts only one center word. <strong>Skip-gram is usually more computationally expensive</strong> because it requires multiple predictions for each center word.</p>
+<p>However, this extra burden can be useful. Skip-gram often performs better for low-frequency words because it distributes the learning signal across individual context predictions. By contrast, CBOW averages context words together, which can sometimes obscure or dilute information that would be useful for representing rare vocabulary.</p>
+<h2 id="center-and-context-embeddings">Center and context embeddings</h2>
+<p>Both CBOW and Skip-gram maintain two sets of embeddings:</p>
+<ul>
+<li>center embeddings</li>
+<li>context embeddings</li>
+</ul>
+<p>These correspond to the two roles a word can play during training: the word being predicted and the words used as context.</p>
+<p>In most practical settings, the <strong>center embeddings</strong> are used as the final word vectors for downstream applications because they tend to capture the semantic relationships researchers are most interested in.</p>
+<p>At a high level, Word2Vec can capture not only topical similarity, such as the relationship between <em>king</em> and <em>queen</em>, but also more structured analogical relationships. This is what gave rise to the famous example:</p>
+<div class="callout">king − man + woman ≈ queen</div>
+<h2 id="choosing-the-window-size">Choosing the window size</h2>
+<p>Another important practical decision in Word2Vec is the choice of <strong>window size</strong>.</p>
+<p>There is no universal theoretical rule for choosing the optimal window. The best choice depends on the corpus, the research question, and the downstream task.</p>
+<p>On corpora with relatively strict syntactic boundaries, such as news articles or encyclopedic text, smaller windows are often useful. A window of roughly <strong>three to five words</strong> tends to capture more localized information, including syntactic and grammatical relations.</p>
+<p>Larger windows, by contrast, capture broader semantic and topical associations. Skip-gram can often benefit from larger windows, such as <strong>five to ten words or more</strong>, because a broader co-occurrence horizon allows the model to learn thematic regularities across a wider context.</p>
+<p>In applied research, window size can be understood as a methodological choice: smaller windows emphasize local syntax and grammatical roles, whereas larger windows emphasize broader semantic and topical associations.</p>
+<h2 id="takeaway">Takeaway</h2>
+<p>Word2Vec transforms words into vectors by learning from patterns of linguistic context. CBOW learns by predicting a word from its surrounding context, while Skip-gram learns by predicting surrounding words from a center word.</p>
+<p>The model is useful not because it “understands” language in a human sense, but because it provides a computationally efficient way to represent semantic relationships in text. For researchers working with large-scale textual data, Word2Vec remains an important conceptual foundation for understanding modern word embeddings and neural language models.</p></article><footer>© 2026 Yuting He · Research Notebook</footer></main></body></html>

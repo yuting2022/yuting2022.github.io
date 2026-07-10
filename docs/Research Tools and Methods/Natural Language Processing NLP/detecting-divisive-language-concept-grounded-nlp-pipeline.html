@@ -1,0 +1,58 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Detecting Divisive Language: A Concept-Grounded NLP Pipeline · Yuting He | Research Notebook</title><link rel="stylesheet" href="/assets/style.css?v=9"><script defer src="/assets/search.js?v=9"></script><!-- GoatCounter analytics: create an account and replace YOUR-CODE below. --><!-- <script data-goatcounter="https://YOUR-CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> --></head><body><aside class="sidebar">
+<a class="profile" href="/index.html" aria-label="Home">
+  <img src="/assets/avatar.jpg" alt="Yuting He" class="avatar">
+  <span class="profile-name">Yuting He</span>
+  <span class="profile-role">PhD Candidate · UT Austin</span>
+</a>
+<nav class="navlinks">
+<a href="/index.html">Home</a>
+<a href="/Research Notes/index.html">Research Notes</a>
+<details open><summary>AI & Society</summary>
+<a href="/AI and Society/index.html" class="nav-parent">Overview</a>
+<a href="/AI and Society/introduction-to-ai.html">Introduction to AI</a>
+<a href="/AI and Society/human-ai-interaction.html">Human–AI Interaction</a>
+<a href="/AI and Society/ai-effects-on-society.html">AI Effects on Society</a>
+</details>
+<a href="/Political Communication/index.html">Political Communication</a>
+<details open><summary>Research Tools & Methods</summary>
+<a href="/Research Tools and Methods/index.html" class="nav-parent">Overview</a>
+<a href="/Research Tools and Methods/Natural Language Processing NLP/index.html">Natural Language Processing (NLP)</a>
+</details>
+</nav>
+<div class="sidebar-footer">
+  <a href="https://x.com/ytinghe?s=11&t=XWACFtYNgirOvXK8ZoiHjw" aria-label="X / Twitter" title="X / Twitter" target="_blank" rel="noopener">𝕏</a>
+  <a href="https://scholar.google.com/citations?user=yOc4yeUAAAAJ&hl=en" aria-label="Google Scholar" title="Google Scholar" target="_blank" rel="noopener">Scholar</a>
+  <a href="/cv.html" aria-label="CV" title="CV">CV</a>
+  <a href="mailto:yutinghe@utexas.edu" aria-label="Email" title="Email">Email</a>
+</div>
+</aside><main><div class="topbar"><input id="search" placeholder="Search research notes…"><button id="theme" aria-label="Toggle dark mode">◐</button></div><header class="pagehead"><h1>Detecting Divisive Language: A Concept-Grounded NLP Pipeline</h1><div class="meta">2026-07-09 · <span class="tag">#NLP</span> <span class="tag">#Text Classification</span> <span class="tag">#Political Polarization</span> <span class="tag">#Computational Social Science</span> <span class="tag">#LLMs</span></div></header><article><p>This note introduces an NLP pipeline I developed with collaborators for detecting divisive language in polarized social media discourse.</p>
+<p>The paper was published in the <strong>Proceedings of the Twentieth International AAAI Conference on Web and Social Media (ICWSM 2026)</strong>. The paper can be read and downloaded here:</p>
+<a class="resource-link" href="https://ojs.aaai.org/index.php/ICWSM/article/view/42796">Read/download the paper</a>
+<h2 id="what-problem-does-this-tool-address">What problem does this tool address?</h2>
+<p>Political polarization is often studied computationally through indirect proxies such as toxicity, hate speech, profanity, or negative sentiment. However, these signals do not necessarily capture the kind of identity-based antagonism that makes discourse polarizing.</p>
+<p>The core idea of this project is that polarizing discourse is not simply “toxic” or “negative.” Instead, it often works by explaining political or social disagreement through group-based identities.</p>
+<p>We conceptualize this as <strong>divisive language</strong>: language that attributes political or social disagreement to group-based identities.</p>
+<h2 id="why-divisive-language">Why divisive language?</h2>
+<p>The paper argues that existing NLP approaches often rely on adjacent but imperfect constructs, such as toxicity or sentiment. These constructs can miss polarizing discourse that appears humorous, neutral, or non-abusive, while also capturing harmful language that is not necessarily polarizing.</p>
+<p>Divisive language focuses more directly on how discourse creates or reinforces group boundaries.</p>
+<p>In the paper, divisive language is operationalized through two observable signals:</p>
+<ul>
+<li>the presence of identifiable social groups;</li>
+<li>the attribution of outcomes, often negative ones, to those group identities.</li>
+</ul>
+<h2 id="how-the-pipeline-works">How the pipeline works</h2>
+<p>The pipeline separates <strong>concept-level supervision</strong> from <strong>high-throughput classification</strong>.</p>
+<p>Rather than asking a small classifier to learn an abstract theoretical construct directly from limited labeled data, the pipeline uses a staged process.</p>
+<h3 id="stage-1-definition-grounded-synthetic-annotation">Stage 1: Definition-grounded synthetic annotation</h3>
+<p>A large proprietary LLM is prompted with a detailed definition of divisive language. It produces both a natural-language analysis and a categorical label.</p>
+<p>This stage is designed to make the supervision signal explicitly grounded in the theoretical definition.</p>
+<h3 id="stage-2-instruction-tuned-llm-for-scalable-label-generation">Stage 2: Instruction-tuned LLM for scalable label generation</h3>
+<p>An open-source instruction-following model is fine-tuned on the LLM-labeled data. It then generates labels for a much larger unlabeled corpus.</p>
+<p>This stage transfers the concept-aligned decision boundary from a powerful model to a more scalable annotation process.</p>
+<h3 id="stage-3-lightweight-classifier-training">Stage 3: Lightweight classifier training</h3>
+<p>A RoBERTa-based classifier is trained on the large pseudo-labeled dataset. The goal is to produce a model that is efficient enough for large-scale computational analysis.</p>
+<h2 id="why-this-matters-methodologically">Why this matters methodologically</h2>
+<p>This project treats LLMs not only as classifiers, but as <strong>methodological intermediaries</strong>. They help translate an abstract social science construct into structured supervision signals that can later be distilled into smaller models.</p>
+<p>For computational social science, this is useful because many important constructs are not reducible to surface keywords. They require conceptual interpretation before they can be scaled.</p>
+<h2 id="main-takeaway">Main takeaway</h2>
+<p>This pipeline shows that divisive language can be modeled as a distinct, computable linguistic construct. It offers a way to study polarization beyond toxicity, sentiment, or hate-speech frameworks.</p></article><footer>© 2026 Yuting He · Research Notebook</footer></main></body></html>
