@@ -2,6 +2,7 @@
 title: Calling Perspective API in Python
 date: 2026-07-09
 tags: NLP, Perspective API, Text Classification, Toxicity Detection, Computational Methods
+article_class: reading-note
 ---
 
 Perspective API is a machine-learning-based tool that scores the perceived attributes of a piece of text, such as toxicity, insult, threat, profanity, identity attack, or other forms of potentially harmful language.

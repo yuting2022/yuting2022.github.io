@@ -2,6 +2,7 @@
 title: Word2Vec: Learning Word Meaning from Context
 date: 2026-07-09
 tags: NLP, Word Embeddings, Computational Methods
+article_class: reading-note
 ---
 
 Word2Vec is a neural embedding framework designed to learn dense, low-dimensional vector representations of words from raw text. Its central idea is simple but powerful: words that appear in similar linguistic environments should be located close to one another in the embedding space.

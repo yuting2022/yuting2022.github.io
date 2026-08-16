@@ -1,22 +1,19 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Word2Vec: Learning Word Meaning from Context · Yuting He | Research Notebook</title><link rel="stylesheet" href="/assets/style.css?v=9"><script defer src="/assets/search.js?v=9"></script><!-- GoatCounter analytics: create an account and replace YOUR-CODE below. --><!-- <script data-goatcounter="https://YOUR-CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> --></head><body><aside class="sidebar">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Word2Vec: Learning Word Meaning from Context · Yuting He | Research Notebook</title><link rel="stylesheet" href="/assets/style.css?v=12"><script defer src="/assets/search.js?v=11"></script><!-- GoatCounter analytics: create an account and replace YOUR-CODE below. --><!-- <script data-goatcounter="https://YOUR-CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> --></head><body><aside class="sidebar">
 <a class="profile" href="/index.html" aria-label="Home">
   <img src="/assets/avatar.jpg" alt="Yuting He" class="avatar">
-  <span class="profile-name">Yuting He</span>
-  <span class="profile-role">PhD Candidate · UT Austin</span>
 </a>
 <nav class="navlinks">
 <a href="/index.html">Home</a>
 <a href="/Research Notes/index.html">Research Notes</a>
 <details open><summary>AI & Society</summary>
-<a href="/AI and Society/index.html" class="nav-parent">Overview</a>
 <a href="/AI and Society/introduction-to-ai.html">Introduction to AI</a>
 <a href="/AI and Society/human-ai-interaction.html">Human–AI Interaction</a>
 <a href="/AI and Society/ai-effects-on-society.html">AI Effects on Society</a>
+<a href="/AI and Society/AI News and Journalism/index.html">AI, News & Journalism</a>
 </details>
 <a href="/Political Communication/index.html">Political Communication</a>
 <details open><summary>Research Tools & Methods</summary>
-<a href="/Research Tools and Methods/index.html" class="nav-parent">Overview</a>
-<a href="/Research Tools and Methods/Natural Language Processing NLP/index.html">Natural Language Processing (NLP)</a>
+<a href="/Research Tools and Methods/Natural Language Processing NLP/index.html">Natural Language Processing</a>
 </details>
 </nav>
 <div class="sidebar-footer">
@@ -25,7 +22,7 @@
   <a href="/cv.html" aria-label="CV" title="CV">CV</a>
   <a href="mailto:yutinghe@utexas.edu" aria-label="Email" title="Email">Email</a>
 </div>
-</aside><main><div class="topbar"><input id="search" placeholder="Search research notes…"><button id="theme" aria-label="Toggle dark mode">◐</button></div><header class="pagehead"><h1>Word2Vec: Learning Word Meaning from Context</h1><div class="meta">2026-07-09 · <span class="tag">#NLP</span> <span class="tag">#Word Embeddings</span> <span class="tag">#Computational Methods</span></div></header><article><p>Word2Vec is a neural embedding framework designed to learn dense, low-dimensional vector representations of words from raw text. Its central idea is simple but powerful: words that appear in similar linguistic environments should be located close to one another in the embedding space.</p>
+</aside><main><div class="topbar"><input id="search" placeholder="Search research notes…"><button id="theme" aria-label="Toggle dark mode">◐</button></div><header class="pagehead"><h1>Word2Vec: Learning Word Meaning from Context</h1><div class="meta">2026-07-09 · <span class="tag">#NLP</span> <span class="tag">#Word Embeddings</span> <span class="tag">#Computational Methods</span></div></header><article class="reading-note"><p>Word2Vec is a neural embedding framework designed to learn dense, low-dimensional vector representations of words from raw text. Its central idea is simple but powerful: words that appear in similar linguistic environments should be located close to one another in the embedding space.</p>
 <p>In this sense, Word2Vec operationalizes a modern version of the distributional hypothesis: a word can be understood by the company it keeps. It does so through a computationally efficient neural architecture that learns word meaning from patterns of co-occurrence.</p>
 <h2 id="two-architectures-cbow-and-skip-gram">Two architectures: CBOW and Skip-gram</h2>
 <p>There are two main variants of Word2Vec: <strong>CBOW</strong> and <strong>Skip-gram</strong>. The key difference lies in the direction of prediction.</p>

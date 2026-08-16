@@ -2,6 +2,7 @@
 title: Detecting Divisive Language: A Concept-Grounded NLP Pipeline
 date: 2026-07-09
 tags: NLP, Text Classification, Political Polarization, Computational Social Science, LLMs
+article_class: reading-note
 ---
 
 This note introduces an NLP pipeline I developed with collaborators for detecting divisive language in polarized social media discourse.

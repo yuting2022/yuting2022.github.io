@@ -1,5 +1,5 @@
 ---
-title: Natural Language Processing (NLP)
+title: Natural Language Processing
 ---
 
 This section collects notes on natural language processing methods and tools for computational social science.

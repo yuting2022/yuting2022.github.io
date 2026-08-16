@@ -13,10 +13,11 @@ CUSTOM_NAV = [
         ('Introduction to AI', '/AI and Society/introduction-to-ai.html'),
         ('Human–AI Interaction', '/AI and Society/human-ai-interaction.html'),
         ('AI Effects on Society', '/AI and Society/ai-effects-on-society.html'),
+        ('AI, News & Journalism', '/AI and Society/AI News and Journalism/index.html'),
     ]),
     ('Political Communication', '/Political Communication/index.html', []),
     ('Research Tools & Methods', '/Research Tools and Methods/index.html', [
-        ('Natural Language Processing (NLP)', '/Research Tools and Methods/Natural Language Processing NLP/index.html'),
+        ('Natural Language Processing', '/Research Tools and Methods/Natural Language Processing NLP/index.html'),
     ]),
 ]
 
@@ -111,14 +112,11 @@ def nav_tree():
     htmls = [f'''<aside class="sidebar">
 <a class="profile" href="/index.html" aria-label="Home">
   <img src="/assets/avatar.jpg" alt="Yuting He" class="avatar">
-  <span class="profile-name">Yuting He</span>
-  <span class="profile-role">PhD Candidate · UT Austin</span>
 </a>
 <nav class="navlinks">''']
     for label, href, children in CUSTOM_NAV:
         if children:
             htmls.append(f'<details open><summary>{label}</summary>')
-            htmls.append(f'<a href="{href}" class="nav-parent">Overview</a>')
             for child, chref in children:
                 htmls.append(f'<a href="{chref}">{child}</a>')
             htmls.append('</details>')
@@ -134,9 +132,9 @@ def nav_tree():
 </aside>'''.format(**SOCIAL_LINKS))
     return '\n'.join(htmls)
 
-def layout(title, body, nav, meta=''):
+def layout(title, body, nav, meta='', article_class=''):
     year = datetime.date.today().year
-    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(title)} · {SITE_TITLE}</title><link rel="stylesheet" href="/assets/style.css?v=9"><script defer src="/assets/search.js?v=9"></script><!-- GoatCounter analytics: create an account and replace YOUR-CODE below. --><!-- <script data-goatcounter="https://YOUR-CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> --></head><body>{nav}<main><div class="topbar"><input id="search" placeholder="Search research notes…"><button id="theme" aria-label="Toggle dark mode">◐</button></div>{meta}<article>{body}</article><footer>© {year} Yuting He · Research Notebook</footer></main></body></html>'''
+    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(title)} · {SITE_TITLE}</title><link rel="stylesheet" href="/assets/style.css?v=12"><script defer src="/assets/search.js?v=11"></script><!-- GoatCounter analytics: create an account and replace YOUR-CODE below. --><!-- <script data-goatcounter="https://YOUR-CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> --></head><body>{nav}<main><div class="topbar"><input id="search" placeholder="Search research notes…"><button id="theme" aria-label="Toggle dark mode">◐</button></div>{meta}<article class="{html.escape(article_class)}">{body}</article><footer>© {year} Yuting He · Research Notebook</footer></main></body></html>'''
 
 def build():
     if OUT.exists():
@@ -161,7 +159,7 @@ def build():
             if bits:
                 meta_html += '<div class="meta">' + ' · '.join(bits) + '</div>'
             meta_html += '</header>'
-        target.write_text(layout(pg['title'], md_to_html(pg['body']), nav, meta_html), encoding='utf-8')
+        target.write_text(layout(pg['title'], md_to_html(pg['body']), nav, meta_html, pg['meta'].get('article_class', '')), encoding='utf-8')
         search.append({'title': pg['title'], 'url': '/' + pg['url'], 'tags': pg['tags'], 'text': re.sub(r'\s+', ' ', pg['body'])[:800]})
     (OUT / 'assets' / 'search-index.json').write_text(json.dumps(search, ensure_ascii=False), encoding='utf-8')
 
