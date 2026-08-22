@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="220" viewBox="0 0 360 220" fill="none">
+  <defs>
+    <filter id="glow" x="0" y="0" width="360" height="220" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="1.6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <circle cx="272" cy="44" r="24" fill="#F3E7A5" opacity="0.95"/>
+  <path d="M82 174C116 165 151 160 191 160C231 160 265 165 300 174" stroke="#BDD6DF" stroke-width="3" stroke-linecap="round" opacity="0.65"/>
+  <path d="M103 188C144 178 180 174 224 176C255 177 280 181 306 188" stroke="#A7C9D5" stroke-width="2.3" stroke-linecap="round" opacity="0.5"/>
+  <g filter="url(#glow)">
+    <path d="M218 173C218 150 234 136 257 136C280 136 296 150 296 173" stroke="#93AFC0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M222 173H292" stroke="#93AFC0" stroke-width="4" stroke-linecap="round"/>
+    <path d="M231 173V151" stroke="#93AFC0" stroke-width="3.3" stroke-linecap="round"/>
+    <path d="M257 173V148" stroke="#93AFC0" stroke-width="3.3" stroke-linecap="round"/>
+    <path d="M283 173V151" stroke="#93AFC0" stroke-width="3.3" stroke-linecap="round"/>
+    <path d="M244 173V160C244 153 249 149 257 149C265 149 270 153 270 160V173" stroke="#93AFC0" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M276 127C278 119 277 110 272 103" stroke="#BDD6DF" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+    <path d="M281 124C284 116 282 109 278 104" stroke="#BDD6DF" stroke-width="2.2" stroke-linecap="round" opacity="0.45"/>
+  </g>
+</svg>

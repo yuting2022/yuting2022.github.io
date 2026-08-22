@@ -1,0 +1,171 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Where Should Humans Stay in the Loop? A Five-Stage Framework for AI-Assisted Social Science · Yuting He | Research Notebook</title><link rel="stylesheet" href="/assets/style.css?v=15"><script defer src="/assets/search.js?v=11"></script><!-- GoatCounter analytics: create an account and replace YOUR-CODE below. --><!-- <script data-goatcounter="https://YOUR-CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> --></head><body><aside class="sidebar">
+<a class="profile" href="/index.html" aria-label="Home">
+  <img src="/assets/avatar.jpg" alt="Yuting He" class="avatar">
+</a>
+<nav class="navlinks">
+<a href="/index.html">Home</a>
+<a href="/Research Notes/index.html">Research Notes</a>
+<details open><summary>AI & Society</summary>
+<a href="/AI and Society/introduction-to-ai.html">Introduction to AI</a>
+<a href="/AI and Society/human-ai-interaction.html">Human–AI Interaction</a>
+<a href="/AI and Society/ai-effects-on-society.html">AI Effects on Society</a>
+<a href="/AI and Society/AI News and Journalism/index.html">AI, News & Journalism</a>
+</details>
+<a href="/Political Communication/index.html">Political Communication</a>
+<details open><summary>Research Tools & Methods</summary>
+<a href="/Research Tools and Methods/Natural Language Processing NLP/index.html">Natural Language Processing</a>
+<a href="/Research Tools and Methods/Statistics/index.html">Statistics</a>
+<a href="/Research Tools and Methods/AI as a Method/index.html">AI as a Method</a>
+</details>
+</nav>
+<div class="sidebar-footer">
+  <a href="https://x.com/ytinghe?s=11&t=XWACFtYNgirOvXK8ZoiHjw" aria-label="X / Twitter" title="X / Twitter" target="_blank" rel="noopener">𝕏</a>
+  <a href="https://scholar.google.com/citations?user=yOc4yeUAAAAJ&hl=en" aria-label="Google Scholar" title="Google Scholar" target="_blank" rel="noopener">Scholar</a>
+  <a href="/cv.html" aria-label="CV" title="CV">CV</a>
+  <a href="mailto:yutinghe@utexas.edu" aria-label="Email" title="Email">Email</a>
+</div>
+</aside><main><div class="topbar"><input id="search" placeholder="Search research notes…"><button id="theme" aria-label="Toggle dark mode">◐</button></div><header class="pagehead article-pagehead"><h1>Where Should Humans Stay in the Loop? A Five-Stage Framework for AI-Assisted Social Science</h1><div class="meta">2026-08-21 · <span class="tag">#AI</span> <span class="tag">#Research Methods</span> <span class="tag">#LLMs</span> <span class="tag">#Human-AI Collaboration</span> <span class="tag">#Social Science</span></div></header><article class="reading-note"><p>Large language models are rapidly becoming part of the social scientist's methodological toolkit. Researchers now use them to annotate political texts, generate experimental stimuli, simulate respondents, discover patterns in large corpora, write code, and even reproduce published studies.</p>
+<p>The usual debate asks a simple question: <strong>How much should researchers rely on AI?</strong></p>
+<p>I think that is the wrong question.</p>
+<p>AI does not play the same epistemic role at every stage of research. A model that is useful for brainstorming a possible explanation may be wholly inappropriate for validating a measurement. A model that performs remarkably well at classifying thousands of political messages may still introduce systematic errors that invalidate downstream statistical inference.</p>
+<div class="callout"><strong>A better question:</strong> What kind of human judgment does each stage of research require, and what role should AI be allowed to play within it?</div>
+<p>I propose thinking about AI-assisted research as a five-stage process:</p>
+<div class="power-flow"><div><strong>1. Theory formation</strong><span>concepts · definitions · theoretical commitments</span></div><b>↓</b><div><strong>2. Hypothesis discovery</strong><span>patterns · anomalies · conjectures</span></div><b>↓</b><div><strong>3. Analytical execution</strong><span>models · prompts · data · methodological architecture</span></div><b>↓</b><div><strong>4. Validation</strong><span>benchmarks · measurement error · inference</span></div><b>↓</b><div><strong>5. Research reproduction</strong><span>automation · replication · scientific responsibility</span></div></div>
+<p>Across these stages, the appropriate division of labor between humans and AI changes. AI can participate throughout the research process, but its capacity to perform a task should not be confused with <strong>epistemic authority</strong> over the decisions that task involves.</p>
+<h2 id="1-theory-formation-ai-can-search-but-it-cannot-commit">1. Theory Formation: AI Can Search, but It Cannot Commit</h2>
+<p>At the earliest stage of research, AI is already extremely useful.</p>
+<p>A researcher entering an unfamiliar literature can ask a language model to identify relevant concepts, map adjacent fields, compare competing definitions, or surface possible connections across disciplines. Models can process an amount of information that would take a human researcher far longer to review manually.</p>
+<p>They may also help identify recurring patterns or places where existing explanations seem incomplete.</p>
+<p>But there is an important distinction between <strong>finding information</strong> and <strong>forming a concept</strong>.</p>
+<p>A model may tell us that scholars define “political polarization” in several different ways. It can summarize those definitions, compare measurement strategies, and point out tensions among them. What it cannot do on the researcher's behalf is determine what polarization <em>should mean in this particular study</em> and why that conceptualization is theoretically appropriate.</p>
+<p>That decision requires what I think of as <strong>interpretive commitment</strong>.</p>
+<p>Concept formation in social science is not simply an information-retrieval problem. Researchers must choose among competing understandings of the world, determine which distinctions matter, and specify how an abstract phenomenon becomes observable. In political communication especially, concepts such as ideology, bias, polarization, populism, and misinformation are historically situated and theoretically contested (Reese, 2023).</p>
+<p>AI can widen the field of possibilities.</p>
+<p>Humans still have to decide which possibility is worth defending.</p>
+<div class="callout"><strong>General rule:</strong> Use AI generously for theoretical exploration, but cautiously for theoretical adjudication.</div>
+<p>The reason humans remain central here is not that AI lacks information. It is that theory requires judgment about meaning.</p>
+<h2 id="2-hypothesis-discovery-pattern-recognition-is-not-scientific-discovery">2. Hypothesis Discovery: Pattern Recognition Is Not Scientific Discovery</h2>
+<p>The distinction becomes even sharper when researchers move from concepts to hypotheses.</p>
+<p>AI is increasingly capable of detecting patterns that humans might overlook. Models can identify latent relationships within large textual datasets, surface unusual clusters, and generate candidate explanations. Recent work suggests that AI systems can assist with forms of concept and hypothesis discovery by identifying interpretable structures in complex data (Movva et al., 2025).</p>
+<p>That is important.</p>
+<p>But discovering a statistical regularity is not the same as recognizing a scientific problem.</p>
+<p>Many consequential research questions begin with something more difficult to formalize: an observation that does not fit existing expectations.</p>
+<p>A political behavior that should have disappeared but persists.</p>
+<p>A theory that works for one group but suddenly fails for another.</p>
+<p>A communication pattern that contradicts what the literature tells us should happen.</p>
+<p>Scientific discovery often depends on recognizing such <strong>anomalies</strong> and deciding that they should not be dismissed as noise.</p>
+<p>This is where the difference between pattern matching and scientific interpretation becomes particularly important.</p>
+<p>A simplified version of scientific discovery might look like:</p>
+<div class="callout"><strong>conjecture → deduction → experiment → revision → new conjecture</strong></div>
+<p>The critical step is <strong>revision</strong>.</p>
+<p>When evidence conflicts with expectations, researchers may need to reconsider their assumptions, redefine concepts, or develop an entirely different explanation. By contrast, contemporary AI systems are generally strongest within an already legible hypothesis space. They can extend, combine, and recombine patterns encoded in existing data, but this is different from deciding that the existing space itself is inadequate (Ding &amp; Li, 2025).</p>
+<p>This does not make AI useless for discovery. Quite the opposite.</p>
+<div class="callout"><strong>Treat AI-generated hypotheses as structured conjectures rather than scientific conclusions.</strong></div>
+<p>Let the model generate possibilities. Let it make surprising associations. Let it propose explanations that initially seem implausible.</p>
+<p>Then ask the human researcher to do the epistemically harder work: determining whether the surprise is meaningful.</p>
+<h2 id="3-analytical-execution-the-question-is-not-which-model-is-best">3. Analytical Execution: The Question Is Not Which Model Is “Best”</h2>
+<p>Once a project reaches analysis, AI's role becomes much more substantial.</p>
+<p>LLMs can classify political messages, position political actors ideologically, analyze frames and sentiment, generate experimental stimuli, process multilingual data, and simulate respondents. In some annotation tasks, their performance can rival or exceed crowd workers (Gilardi et al., 2023; Le Mens &amp; Gallego, 2025).</p>
+<p>At this stage, researchers may therefore be tempted to ask:</p>
+<p><strong>Which model gives me the highest accuracy?</strong></p>
+<p>But model performance alone is an insufficient criterion for methodological choice.</p>
+<p>A proprietary model may provide excellent performance while changing silently over time. An open-weight model may offer better reproducibility and privacy while requiring considerably more infrastructure. A model that performs well in English may behave differently in German, Chinese, or a low-resource language. A classifier that works for relatively objective categories may struggle with socially constructed concepts such as empathy, grievance, extremity, or ideological identity (Ziems et al., 2024; Urman &amp; Makhortykh, 2025).</p>
+<p>The methodological question is therefore not simply which model is strongest.</p>
+<div class="callout"><strong>Which combination of model, prompting strategy, data, and validation procedure best matches the theoretical object I am trying to measure?</strong></div>
+<p>This is where human involvement changes form.</p>
+<p>During theory formation, humans provide conceptual judgment.</p>
+<p>During analysis, humans increasingly provide <strong>methodological architecture</strong>.</p>
+<p>The researcher decides what the model is allowed to do, what information it receives, how prompts are constructed, whether outputs are aggregated across repeated runs, which model version is used, and how uncertainty will be documented.</p>
+<p>This becomes especially important because AI systems introduce two challenges that conventional research workflows were not designed around: <strong>prompt brittleness</strong> and <strong>model drift</strong>. Small changes in wording or ordering can change model outputs. Proprietary models can also be updated without researchers knowing exactly what changed (Bail, 2024; Linegar et al., 2023).</p>
+<p>For AI-assisted research, documenting prompts, model versions, sampling parameters, and validation procedures is not administrative detail.</p>
+<p>It is part of the method.</p>
+<h2 id="4-validation-90-accuracy-may-still-be-wrong-enough">4. Validation: 90% Accuracy May Still Be Wrong Enough</h2>
+<p>Validation may be the most important—and most underestimated—stage of AI-assisted social science.</p>
+<p>Researchers commonly evaluate an AI annotation system by comparing its labels with human-coded data. If agreement is sufficiently high, they conclude that the model is reliable and proceed to use its predictions as variables in subsequent analysis.</p>
+<p>But there are actually <strong>two different validation problems</strong>.</p>
+<p>The first is familiar:</p>
+<p><strong>Are the AI-generated labels accurate?</strong></p>
+<p>The second is more consequential:</p>
+<p><strong>Do the errors in those labels distort the statistical conclusions we eventually draw?</strong></p>
+<p>These are not the same question.</p>
+<p>Imagine an AI classifier that achieves 90% accuracy when identifying a political communication category. That sounds excellent.</p>
+<p>But suppose its remaining errors are not random. Perhaps the model is slightly more likely to misclassify messages written by one ideological group, messages about race, or messages using a particular rhetorical style.</p>
+<p>If those errors correlate with variables central to the research question, they can propagate through regression models and distort statistical inference.</p>
+<p>Research using design-based supervised learning demonstrates exactly this problem: even highly accurate AI annotations can produce severely misleading confidence intervals when prediction errors systematically correlate with theoretically relevant variables. Combining a smaller set of expert human annotations with model predictions can help correct this measurement error (Rister Portinari Maranca et al., 2025).</p>
+<div class="callout"><strong>High predictive accuracy does not automatically imply valid inference.</strong></div>
+<p>The unit of validation should therefore not be the model alone.</p>
+<p>It should be the <strong>entire research pipeline</strong>.</p>
+<p>Researchers need to ask not merely whether AI “gets the labels right,” but how its mistakes are distributed and whether those mistakes matter for the substantive conclusions being drawn.</p>
+<p>This is also why human oversight is especially important at the validation stage.</p>
+<p>Humans are not simply proofreading an AI system.</p>
+<p>They are constructing the benchmark against which claims about the social world become credible.</p>
+<h2 id="5-research-reproduction-automation-changes-what-becomes-scarce">5. Research Reproduction: Automation Changes What Becomes Scarce</h2>
+<p>AI may have its clearest advantages in the later, more procedural stages of research.</p>
+<p>Tasks involved in reproduction—locating replication materials, reconstructing computational environments, running existing models, and checking outputs—are often tedious but relatively well structured. Recent work shows that AI-assisted workflows can automate substantial parts of replication when appropriate materials are available (Xu &amp; Yang, 2026).</p>
+<p>This is an exciting possibility.</p>
+<p>But automation also creates a paradox.</p>
+<p>If AI dramatically lowers the cost of producing research, then producing <em>more research</em> becomes easier.</p>
+<p>Producing <em>important research</em> does not necessarily become easier.</p>
+<p>Recent evidence from a large-scale analysis of scientific papers illustrates this tension: scientists adopting AI tools may increase their individual productivity and impact while scientific exploration becomes more concentrated at the collective level (Hao et al., 2026).</p>
+<p>The implication is not that researchers should avoid AI.</p>
+<p>It is that automation changes what becomes scarce.</p>
+<p>When coding becomes easier, coding skill becomes less differentiating.</p>
+<p>When literature retrieval becomes easier, retrieving literature becomes less differentiating.</p>
+<p>When statistical workflows can be partially automated, executing those workflows becomes less differentiating.</p>
+<p>What becomes more valuable are the activities that remain difficult to automate:</p>
+<p><strong>asking consequential questions, recognizing anomalies, making theoretical distinctions, exercising critical judgment, and imagining explanations that do not yet exist.</strong></p>
+<p>In an AI-assisted scientific ecosystem, human creativity may become more—not less—important.</p>
+<h2 id="hallucination-is-not-always-the-same-kind-of-problem">Hallucination Is Not Always the Same Kind of Problem</h2>
+<p>This stage-dependent perspective also changes how we should think about familiar AI limitations.</p>
+<p>Consider hallucination.</p>
+<p>The standard response is straightforward: hallucinations are errors and should therefore be eliminated.</p>
+<p>That is obviously correct when a model is retrieving factual information or producing a measurement that must correspond to empirical reality.</p>
+<p>But in an exploratory stage, the answer may be more complicated.</p>
+<p>Scientific discovery has never depended on uninterrupted correctness. Researchers routinely entertain conjectures that eventually turn out to be false. A strange AI-generated connection may therefore sometimes function as a creative prompt (Zhang et al., 2025).</p>
+<p>The key is not whether the output is wrong.</p>
+<p>The key is <strong>what the researcher is using it for</strong>.</p>
+<p>During brainstorming, conceptual exploration, or hypothesis generation, an unexpected model output might be valuable precisely because it pushes the researcher outside an obvious path.</p>
+<p>During operationalization, annotation, or validation, the same behavior becomes a methodological threat.</p>
+<p>So instead of asking:</p>
+<p><strong>Does this model hallucinate?</strong></p>
+<p>Researchers should also ask:</p>
+<p><strong>At this particular stage of research, what are the consequences if it does?</strong></p>
+<h2 id="ai-reasoning-should-be-treated-as-conjecture-not-explanation">AI Reasoning Should Be Treated as Conjecture, Not Explanation</h2>
+<p>The same principle applies when LLMs explain their own reasoning.</p>
+<p>Chain-of-thought prompting and related techniques can produce detailed rationales for why a model reached a particular conclusion. Those explanations may appear transparent and persuasive.</p>
+<p>But they should not automatically be treated as faithful accounts of the underlying decision process. Model-generated rationales can be inconsistent with outputs and can themselves contain invented or unstable reasoning.</p>
+<p>A more interesting approach is to use those explanations instrumentally.</p>
+<p>For example, Peng et al. (2025) asked a multimodal LLM to explain credibility judgments about visual content, extracted candidate features from those explanations, and then validated the features against human judgments. Instead of accepting the model's explanation as ground truth, they used it as a source of empirically testable possibilities.</p>
+<div class="callout"><strong>LLM reasoning is most useful when treated as something to test, not something to trust.</strong></div>
+<h2 id="perhaps-human-ai-collaboration-is-the-wrong-metaphor">Perhaps “Human–AI Collaboration” Is the Wrong Metaphor</h2>
+<p>All of this leads to a deeper question.</p>
+<p>We routinely describe the emerging research environment as one of <strong>human–AI collaboration</strong>.</p>
+<p>But collaboration is a surprisingly strong word.</p>
+<p>Genuine collaboration implies some combination of shared goals, mutual understanding, reciprocal adaptation, and common ground. Contemporary AI systems can assist, accelerate, simulate, and automate research activities, but they do not bear scholarly responsibility for the knowledge they help produce (Shah &amp; Tamine, 2026).</p>
+<p>They do not decide which scientific questions are socially important. They do not defend a conceptual choice to reviewers. They do not carry accountability when an analysis harms a population or produces a misleading conclusion.</p>
+<p>Researchers do.</p>
+<p>That asymmetry matters.</p>
+<p>Perhaps the goal, then, should not be to determine the optimal percentage of “human” versus “AI” participation in research.</p>
+<p>It should be to design research systems in which the capabilities of AI are used where they are epistemically productive, while responsibility remains clearly located where it belongs.</p>
+<h2 id="the-framework-at-a-glance">The Framework at a Glance</h2>
+<div class="framework-scroll"><table class="framework-table"><thead><tr><th>Research stage</th><th>Productive role for AI</th><th>Irreplaceable human role</th></tr></thead><tbody><tr><td><strong>Theory formation</strong></td><td>Search, comparison, conceptual exploration</td><td>Meaning-making and theoretical commitment</td></tr><tr><td><strong>Hypothesis discovery</strong></td><td>Pattern detection and conjecture generation</td><td>Anomaly recognition and explanation</td></tr><tr><td><strong>Analytical execution</strong></td><td>Classification, generation, simulation, scaling</td><td>Methodological architecture and contextual judgment</td></tr><tr><td><strong>Validation</strong></td><td>Supporting evaluation and diagnostics</td><td>Ground-truth construction and inferential accountability</td></tr><tr><td><strong>Research reproduction</strong></td><td>Automation and computational replication</td><td>Scientific judgment and responsibility</td></tr></tbody></table></div>
+<p>The central principle is simple:</p>
+<div class="callout"><strong>The fact that AI can perform a research task does not mean that it should control the epistemic decision embedded in that task.</strong></div>
+<p>AI can participate across the entire scientific process.</p>
+<p>But the appropriate role of the human changes from stage to stage—and understanding those differences may be more important than deciding whether researchers should use AI at all.</p>
+<h2 id="selected-references">Selected References</h2>
+<p>Bail, C. A. (2024). Can generative AI improve social science? <em>Proceedings of the National Academy of Sciences, 121</em>(21), e2314021121.</p>
+<p>Ding, A. W., &amp; Li, S. (2025). Generative AI lacks the human creativity to achieve scientific discovery from scratch. <em>Scientific Reports, 15</em>, 9587.</p>
+<p>Gilardi, F., Alizadeh, M., &amp; Kubli, M. (2023). ChatGPT outperforms crowd workers for text-annotation tasks. <em>Proceedings of the National Academy of Sciences, 120</em>(30), e2305016120.</p>
+<p>Hao, Q., Xu, F., Li, Y., &amp; Evans, J. (2026). Artificial intelligence tools expand scientists' impact but contract science's focus. <em>Nature</em>.</p>
+<p>Le Mens, G., &amp; Gallego, A. (2025). Positioning political texts with large language models by asking and averaging. <em>Political Analysis, 33</em>(3), 274–282.</p>
+<p>Linegar, M., Kocielnik, R., &amp; Alvarez, R. M. (2023). Large language models and political science. <em>Frontiers in Political Science, 5</em>, 1257092.</p>
+<p>Movva, R., Peng, K., Garg, N., Kleinberg, J., &amp; Pierson, E. (2025). Sparse autoencoders for hypothesis generation. <em>arXiv preprint arXiv:2502.04382</em>.</p>
+<p>Peng, Y., Qian, S., Lu, Y., &amp; Shen, C. (2025). Large language model-informed feature discovery improves prediction and interpretation of credibility perceptions of visual content. <em>arXiv preprint arXiv:2504.10878</em>.</p>
+<p>Reese, S. D. (2023). Writing the conceptual article: A practical guide. <em>Digital Journalism, 11</em>(7), 1195–1210.</p>
+<p>Rister Portinari Maranca, A., Chung, J., Hinck, M., Wolsky, A. D., Egami, N., &amp; Stewart, B. M. (2025). Correcting the measurement errors of AI-assisted labeling in image analysis using design-based supervised learning. <em>Sociological Methods &amp; Research, 54</em>(3), 984–1016.</p>
+<p>Shah, C., &amp; Tamine, L. (2026). Why “human-AI collaboration” obscures what actually happens in information seeking. <em>Journal of the Association for Information Science and Technology</em>. Advance online publication.</p>
+<p>Urman, A., &amp; Makhortykh, M. (2025). The silence of the LLMs: Cross-lingual analysis of guardrail-related political bias and false information prevalence in ChatGPT, Google Bard (Gemini), and Bing Chat. <em>Telematics and Informatics, 96</em>, 102211.</p>
+<p>Xu, Y., &amp; Yang, L. Y. (2026). Scaling reproducibility: An AI-assisted workflow for large-scale replication and reanalysis. <em>arXiv preprint arXiv:2602.16733</em>.</p>
+<p>Zhang, Y., Khan, S. A., Mahmud, A., Yang, H., Lavin, A., Levin, M., et al. (2025). Advancing the scientific method with large language models: From hypothesis to discovery. <em>arXiv preprint arXiv:2505.16477</em>.</p>
+<p>Ziems, C., Held, W., Shaikh, O., Chen, J., Zhang, Z., &amp; Yang, D. (2024). Can large language models transform computational social science? <em>Computational Linguistics, 50</em>(1), 237–291.</p></article><footer>© 2026 Yuting He · Research Notebook</footer></main></body></html>

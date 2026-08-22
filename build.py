@@ -18,6 +18,8 @@ CUSTOM_NAV = [
     ('Political Communication', '/Political Communication/index.html', []),
     ('Research Tools & Methods', '/Research Tools and Methods/index.html', [
         ('Natural Language Processing', '/Research Tools and Methods/Natural Language Processing NLP/index.html'),
+        ('Statistics', '/Research Tools and Methods/Statistics/index.html'),
+        ('AI as a Method', '/Research Tools and Methods/AI as a Method/index.html'),
     ]),
 ]
 
@@ -134,7 +136,7 @@ def nav_tree():
 
 def layout(title, body, nav, meta='', article_class=''):
     year = datetime.date.today().year
-    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(title)} · {SITE_TITLE}</title><link rel="stylesheet" href="/assets/style.css?v=12"><script defer src="/assets/search.js?v=11"></script><!-- GoatCounter analytics: create an account and replace YOUR-CODE below. --><!-- <script data-goatcounter="https://YOUR-CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> --></head><body>{nav}<main><div class="topbar"><input id="search" placeholder="Search research notes…"><button id="theme" aria-label="Toggle dark mode">◐</button></div>{meta}<article class="{html.escape(article_class)}">{body}</article><footer>© {year} Yuting He · Research Notebook</footer></main></body></html>'''
+    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(title)} · {SITE_TITLE}</title><link rel="stylesheet" href="/assets/style.css?v=15"><script defer src="/assets/search.js?v=11"></script><!-- GoatCounter analytics: create an account and replace YOUR-CODE below. --><!-- <script data-goatcounter="https://YOUR-CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> --></head><body>{nav}<main><div class="topbar"><input id="search" placeholder="Search research notes…"><button id="theme" aria-label="Toggle dark mode">◐</button></div>{meta}<article class="{html.escape(article_class)}">{body}</article><footer>© {year} Yuting He · Research Notebook</footer></main></body></html>'''
 
 def build():
     if OUT.exists():
@@ -150,7 +152,8 @@ def build():
         show_header = pg['meta'].get('show_header', 'true').lower() != 'false'
         meta_html = ''
         if show_header:
-            meta_html = f'<header class="pagehead"><h1>{html.escape(pg["title"])}</h1>'
+            header_class = "pagehead article-pagehead" if pg['meta'].get('article_class') == 'reading-note' else "pagehead"
+            meta_html = f'<header class="{header_class}"><h1>{html.escape(pg["title"])}</h1>'
             bits = []
             if pg['date']:
                 bits.append(pg['date'])
