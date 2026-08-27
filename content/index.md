@@ -2,31 +2,56 @@
 title: Yuting He
 show_header: false
 ---
-<div class="home-hero">
-<div class="home-title">Yuting He</div>
-<p class="home-role"><strong>PhD Candidate</strong>, School of Journalism and Media, The University of Texas at Austin</p>
-<p class="affiliation">Graduate Research Assistant at the <a href="https://mediaengagement.org/">Center for Media Engagement</a></p>
-<div class="mongolia-mark" aria-hidden="true"><img src="/assets/mongolia-mark.svg" alt=""></div>
-<div class="divider"></div>
-<p class="lead intro-line">My research examines three aspects:</p>
-<div class="aspects">
-<div class="aspect"><span class="aspect-number">1</span><span><strong>Information Ecosystems</strong><br>How AI and other technologies shape the online information ecosystem and news production.</span></div>
-<div class="aspect"><span class="aspect-number">2</span><span><strong>Public Perception and Engagement</strong><br>How people perceive and engage with emerging technologies.</span></div>
-<div class="aspect"><span class="aspect-number">3</span><span><strong>AI-Augmented Methods</strong><br>How AI can augment social science research methods.</span></div>
+<section class="home-shell">
+<section class="home-hero-new">
+<div class="hero-copy">
+<div class="name-lockup name-lockup-tight">
+<h1 class="home-name">Yuting He</h1>
+<img class="home-mongolia-mark" src="/assets/mongolia-mark.svg" alt="" aria-hidden="true">
 </div>
-<p class="site-statement">This site is more than a professional homepage. I am building it as a living research notebook: a place to document my reflections on computational social science, especially AI, political communication, and journalism; to develop open-source learning materials on AI and computational methods; and to occasionally reflect on academic life from my perspective as a woman researcher. <span aria-hidden="true">🌱</span></p>
+<p class="home-role">PhD Candidate, <a href="https://journalism.utexas.edu/" target="_blank" rel="noopener">School of Journalism and Media</a>, The University of Texas at Austin</p>
+<p class="home-affiliation">Graduate Research Assistant at the <a href="https://mediaengagement.org/">Center for Media Engagement</a></p>
+<a class="hero-cv-link" href="/cv.html" aria-label="View CV"><svg class="hero-cv-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.75h7l3 3V20.25H7z"></path><path d="M14 3.75v3h3"></path><path d="M9.5 11h5M9.5 14h5M9.5 17h3.5"></path></svg><span>Curriculum Vitae</span></a>
 </div>
+<div class="hero-photo-wrap artistic-photo-wrap"><img src="/assets/avatar-cutout.png" alt="Yuting He" class="home-photo artistic-home-photo"></div>
+</section>
 
-## When I’m Not Researching...
+<section class="site-statement-block">
+<p class="home-site-statement statement-card">This site is more than a professional homepage. I am building it as a living research notebook: a place to document my reflections on computational social science, especially AI, political communication, and journalism; to develop open-source learning materials on AI and computational methods; and to occasionally reflect on academic life from my perspective as a woman researcher. <span aria-hidden="true">🌱</span></p>
+</section>
 
+<section class="research-focus-block">
+<div class="section-label-row"><span>Research Focus</span><span class="decorative-rule"></span></div>
+<div class="focus-grid-new">
+<article class="focus-panel"><span class="focus-index">01</span><h2>Information Ecosystems</h2><p>How AI and other technologies shape the online information ecosystem and news production.</p></article>
+<article class="focus-panel"><span class="focus-index">02</span><h2>Public Perception and Engagement</h2><p>How people perceive and engage with emerging technologies.</p></article>
+<article class="focus-panel"><span class="focus-index">03</span><h2>AI-Augmented Methods</h2><p>How AI can augment social science research methods.</p></article>
+</div>
+<p class="scholar-note">For my previous research, please see my <a href="https://scholar.google.com/citations?user=yOc4yeUAAAAJ&hl=en" target="_blank" rel="noopener"><strong>Google Scholar profile <span aria-hidden="true">↗</span></strong></a>.</p>
+</section>
+
+<section class="explore-block notes-articles-block">
+<div class="section-label-row section-label-notes"><span class="section-title-with-icon"><svg class="section-page-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.75h7l3 3V20.25H7z"></path><path d="M14 3.75v3h3"></path><path d="M9 10.25h6M9 13.25h6M9 16.25h4.5"></path></svg><span>Research Notes &amp; Articles</span></span><span class="decorative-rule"></span></div>
+<div class="explore-grid">
+<a class="explore-tile" href="/AI%20and%20Society/index.html"><span class="tile-number">01</span><strong>AI &amp; Society</strong></a>
+<a class="explore-tile" href="/Political%20Communication/index.html"><span class="tile-number">02</span><strong>Political Communication</strong></a>
+<a class="explore-tile" href="/Research%20Tools%20and%20Methods/index.html"><span class="tile-number">03</span><strong>Research Tools &amp; Methods</strong></a>
+<a class="explore-tile" href="/Research%20Notes/index.html"><span class="tile-number">04</span><strong>Research Notes</strong></a>
+</div>
+</section>
+
+<section class="life-section-new">
+<div class="section-label-row"><span>Beyond Research</span><span class="decorative-rule"></span></div>
+<div class="life-copy-new">
+<h2>When I’m Not Researching...</h2>
 <div class="life-chips" aria-label="Personal interests"><span class="life-chip">🧗 Climbing</span><span class="life-chip">🪴 Plants</span><span class="life-chip">🐈 Cats</span><span class="life-chip">⛺ National Parks</span><span class="life-chip">🐎 Inner Mongolia</span></div>
-
-<div class="life-copy"><p>I spend a lot of my time climbing, usually every other day. It has become part of my routine to build physical strength and, more importantly, a way to shift my mind away from academic work. I currently run a TikTok account as a climbing content creator, where I share climbing skills and fun stories through short videos.</p><p>I am also a plant lover and keep a growing collection of plants at home. There are now so many that part of my place almost feels like a small plant exhibition. Taking care of them has become surprisingly therapeutic for me. I am also very much a cat person and a proud mom of two chunky cats.</p><p>And, as you can probably guess, I really enjoy camping. Whenever I have the chance, I like camping in national parks around the U.S.</p><p>Last but not least, I am from Inner Mongolia, China. My region’s Mongolian cultural heritage is an important part of who I am, and I have a deep love for Mongolian music, food, and cultural traditions.</p></div>
-
+<p>I spend a lot of my time climbing, usually every other day. It has become part of my routine to build physical strength and, more importantly, a way to shift my mind away from academic work. I currently run a TikTok account as a climbing content creator, where I share climbing skills and fun stories through short videos.</p>
+<p>I am also a plant lover and keep a growing collection of plants at home. There are now so many that part of my place almost feels like a small plant exhibition. Taking care of them has become surprisingly therapeutic for me. I am also very much a cat person and a proud mom of two chunky cats.</p>
+<p>And, as you can probably guess, I really enjoy camping. Whenever I have the chance, I like camping in national parks around the U.S.</p>
+<p>Last but not least, I am from Inner Mongolia, China. My region’s Mongolian cultural heritage is an important part of who I am, and I have a deep love for Mongolian music, food, and cultural traditions.</p>
+</div>
 <div class="life-photo-grid" aria-label="Climbing, cats, and national park photos"><figure class="life-photo life-photo-park"><img src="/assets/life-national-park.jpg" alt="An elk in a mountain landscape in a U.S. national park" loading="lazy"></figure><figure class="life-photo life-photo-outdoors"><img src="/assets/life-outdoors.jpg" alt="Standing in a mountain valley during an outdoor trip" loading="lazy"></figure><figure class="life-photo life-photo-climbing"><img src="/assets/life-climbing.jpg" alt="Indoor rock climbing" loading="lazy"></figure><figure class="life-photo life-photo-cat-one"><img src="/assets/life-cat-one.jpg" alt="One of my cats" loading="lazy"></figure><figure class="life-photo life-photo-cat-two"><img src="/assets/life-cat-two.jpg" alt="One of my cats with a plush toy" loading="lazy"></figure></div>
+</section>
 
-## Contact
-
-Email: [yutinghe@utexas.edu](mailto:yutinghe@utexas.edu)
-
-<div class="quote">In the age of AI, answers are becoming a commodity. Better questions are not.</div>
+<section class="home-contact"><span>Contact</span><a href="mailto:yutinghe@utexas.edu">yutinghe@utexas.edu</a><blockquote>In the age of AI, answers are becoming a commodity. Better questions are not.<span class="quote-flourish" aria-hidden="true">✒</span></blockquote></section>
+</section>
